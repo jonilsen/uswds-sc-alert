@@ -1,6 +1,20 @@
 import React, { Component } from "react";
-import { ThemeProvider } from "styled-components";
+import { injectGlobal, ThemeProvider } from "styled-components";
 import Alert from "./components/alert/alert";
+
+injectGlobal`
+  html {
+    font-size: 10px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+`;
 
 const theme = {
   colorGrayLightest: "#f1f1f1",
