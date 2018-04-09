@@ -2,7 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const UsaAlert = styled.div`
-  background-color: ${props => props.theme.colorGrayLightest};
+  background-color: ${props => {
+    if (!props.variant) return props.theme.colorGrayLightest;
+    if (props.variant === "success") return props.theme.colorGreenLightest;
+    if (props.variant === "warning") return props.theme.colorGoldLightest;
+    if (props.variant === "error") return props.theme.colorSecondaryLightest;
+    if (props.variant === "info") return props.theme.colorPrimaryAltLightest;
+  }};
   background-position: ${props => props.theme.spacingMedium}
     ${props => props.theme.spacingMedium};
   background-repeat: no-repeat;
@@ -14,7 +20,13 @@ const UsaAlert = styled.div`
   position: relative;
 
   &:before {
-    background-color: ${props => props.theme.colorGray};
+    background-color: ${props => {
+      if (!props.variant) return props.theme.colorGray;
+      if (props.variant === "success") return props.theme.colorGreen;
+      if (props.variant === "warning") return props.theme.colorGold;
+      if (props.variant === "error") return props.theme.colorSecondary;
+      if (props.variant === "info") return props.theme.colorPrimaryAlt;
+    }};
     content: "";
     height: 100%;
     left: 0;
@@ -28,7 +40,7 @@ const UsaAlert = styled.div`
 class Alert extends React.Component {
   render() {
     return (
-      <UsaAlert>
+      <UsaAlert variant="success">
         <div>
           <h3>Success Status</h3>
           <p>
