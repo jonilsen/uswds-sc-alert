@@ -12,6 +12,16 @@ const UsaAlert = styled.div`
   padding-right: ${props => props.theme.spacingMedium};
   padding-top: ${props => props.theme.spacingMedium};
   position: relative;
+
+  &:before {
+    background-color: ${props => props.theme.colorGray};
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: ${props => props.theme.spacingSmall};
+  }
 `;
 
 //Create a new Todo item

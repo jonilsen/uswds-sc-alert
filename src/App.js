@@ -17,6 +17,7 @@ injectGlobal`
 `;
 
 const theme = {
+  colorGray: "#5b616b",
   colorGrayLightest: "#f1f1f1",
   colorGreen: "#2e8540",
   colorGreenLightest: "#e7f4e4",
