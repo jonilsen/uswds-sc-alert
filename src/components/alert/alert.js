@@ -34,6 +34,42 @@ const UsaAlert = styled.div`
     top: 0;
     width: ${props => props.theme.spacingSmall};
   }
+
+  a {
+    color: ${props => props.theme.colorPrimaryDarker};
+
+    &:focus,
+    &:hover {
+      color: ${props => props.theme.colorPrimaryDarkest};
+    }
+  }
+
+  ul {
+    margin-bottom: 0;
+    margin-top: ${props => props.theme.spacingSmall};
+    padding-left: ${props => props.theme.spacingSmall};
+  }
+`;
+
+const UsaAlertBody = styled.div`
+  display: table-cell;
+  vertical-align: top;
+`;
+
+const UsaAlertHeading = styled.h3`
+  margin-top: 0;
+  margin-bottom: 0;
+`;
+
+const UsaAlertText = styled.p`
+  font-family: sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  &:only-child {
+    margin-bottom: $spacing-small;
+    padding-top: $spacing-x-small;
+  }
 `;
 
 //Create a new Todo item
@@ -41,14 +77,14 @@ class Alert extends React.Component {
   render() {
     return (
       <UsaAlert variant="success">
-        <div>
-          <h3>Success Status</h3>
-          <p>
+        <UsaAlertBody>
+          <UsaAlertHeading>Success Status</UsaAlertHeading>
+          <UsaAlertText>
             Lorem ipsum dolor sit amet,{" "}
             <a href="javascript:void(0);">consectetur adipiscing</a> elit, sed
             do eiusmod.
-          </p>
-        </div>
+          </UsaAlertText>
+        </UsaAlertBody>
       </UsaAlert>
     );
   }

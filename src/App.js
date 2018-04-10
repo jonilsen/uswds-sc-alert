@@ -25,6 +25,8 @@ const theme = {
   colorGoldLightest: "#fff1d2 ",
   colorSecondary: "#e31c3d ",
   colorSecondaryLightest: "#f9dede",
+  colorPrimaryDarker: "#205493",
+  colorPrimaryDarkest: "#112e51",
   colorPrimaryAlt: "#02bfe7",
   colorPrimaryAltLightest: "#e1f3f8",
   spacingMedium: "2rem",
